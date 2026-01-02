@@ -1,209 +1,189 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.s1 {font-kerning: none; color: #0a0a0a; -webkit-text-stroke: 0px #0a0a0a}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appetite by Addi | Order</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #faf7f2;
+      color: #333;
+    }
+    header {
+      background-color: #e8cfc4;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e8cfc4;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed #ccc;
+    }
+    .menu-item span {
+      font-weight: 600;
+    }
+    .note {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .order-box {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    form button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #e8cfc4;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #d4b8aa;
+    }
+    footer {
+      background-color: #e8cfc4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #7a3e2e;
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Appetite by Addi | Order&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Citadel+Script&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #faf7f2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #e8cfc4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Citadel Script', cursive;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 900px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 2rem auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 3rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 2px solid #e8cfc4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.menu-item {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px dashed #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.menu-item span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.note {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.order-box {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 10px rgba(0,0,0,0.05);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form input, form textarea, form select {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.25rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #e8cfc4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>form button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #d4b8aa;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #e8cfc4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #7a3e2e;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Appetite by Addi&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Tuscaloosa + COLGA&lt;/p&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Menu&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Kitchen sink but better Cookies (6)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;$12&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">   </span>&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Pan Banging Chocolate Chip Cookies (6)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;$12&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Pan Banging Funfetti Cookies (6)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;$12&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Brown Butter Blondies (Serves 12-16)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;$22&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Seasonal Bundt Cake (Serves 12-16)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;$30&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Custom Order (message for details)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;Varies&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="note"&gt;Menu rotates seasonally. Follow along for delicious flavors and specials.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="order-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Place an Order&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;form action="https://formspree.io/f/xlgdnjla" method="POST" id="order-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Full Name&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" name="full-name" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Email&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" name="email" required /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Order Details (items + quantity)&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea name="order" rows="4" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Pickup or Delivery?&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;select name="method" id="method" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="Pickup"&gt;Pickup&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="Delivery"&gt;Delivery&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Payment Method&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;select name="payment" id="payment-method" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="Online"&gt;Pay Online&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="submit"&gt;Submit Order&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="note"&gt;You will receive a confirmation email with total price and payment instructions.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const form = document.getElementById('order-form');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>form.addEventListener('submit', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const payment = document.getElementById('payment-method').value;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(payment === 'Online') {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">          </span>window.location.href = '<a href="https://venmo.com/u/addisongrimes">https://venmo.com/u/addisongrimes</a>'; //</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;About Appetite by Addi&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Hi I’m Addi! I am a current college student at The University of Alabama.<span class="s1"> Over the last year or so I discovered a deep appreciation for the culinary arts in all aspects.</span> Appetite by Addi started as a passion project but has turned out to be so much more.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;© 2026 Appetite by Addi&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<header>
+  <h1>Appetite by Addi</h1>
+  <p>Tuscaloosa + COLGA</p>
+</header>
+
+<main>
+  <section>
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+      <span>Kitchen sink but better Cookies (6)</span>
+      <span>$12</span>
+    </div>
+    <div class="menu-item">
+      <span>Pan Banging Chocolate Chip Cookies (6)</span>
+      <span>$12</span>
+    </div>
+    <div class="menu-item">
+      <span>Pan Banging Funfetti Cookies (6)</span>
+      <span>$12</span>
+    </div>
+    <div class="menu-item">
+      <span>Brown Butter Blondies (Serves 12-16)</span>
+      <span>$22</span>
+    </div>
+    <div class="menu-item">
+      <span>Seasonal Bundt Cake (Serves 12-16)</span>
+      <span>$30</span>
+    </div>
+    <div class="menu-item">
+      <span>Custom Order (message for details)</span>
+      <span>Varies</span>
+    </div>
+
+    <p class="note">Menu rotates seasonally. Follow along for delicious flavors and specials.</p>
+  </section>
+
+  <section>
+    <h2>About Appetite by Addi</h2>
+    <p>
+      Hi I’m Addi! I am a current college student at The University of Alabama. Over the last year or so I discovered a deep appreciation for the culinary arts in all aspects. Appetite by Addi started as a passion project but has turned out to be so much more.
+    </p>
+  </section>
+
+  <section class="order-box">
+    <h2>Place an Order</h2>
+    <form action="https://formspree.io/f/xlgdnjla" method="POST" id="order-form">
+      <label>Full Name<br />
+        <input type="text" name="full-name" required />
+      </label><br /><br />
+
+      <label>Email<br />
+        <input type="email" name="email" required />
+      </label><br /><br />
+
+      <label>Order Details (items + quantity)<br />
+        <textarea name="order" rows="4" required></textarea>
+      </label><br /><br />
+
+      <label>Pickup or Delivery?<br />
+        <select name="method" id="method" required>
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+      </label><br /><br />
+
+      <label>Payment Method<br />
+        <select name="payment" id="payment-method" required>
+          <option value="Online">Pay Online</option>
+        </select>
+      </label><br /><br />
+
+      <button type="submit">Submit Order</button>
+    </form>
+    <p class="note">You will be redirected to Venmo to complete your payment.</p>
+
+    <script>
+      const form = document.getElementById('order-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        window.location.href = 'https://venmo.com/u/addisongrimes';
+      });
+    </script>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Appetite by Addi</p>
+</footer>
+
 </body>
 </html>
