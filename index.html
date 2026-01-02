@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appetite by Addi | Order</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #faf7f2;
+      color: #333;
+    }
+    header {
+      background-color: #e8cfc4;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e8cfc4;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed #ccc;
+    }
+    .menu-item span {
+      font-weight: 600;
+    }
+    .note {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .order-box {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    form button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #e8cfc4;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #d4b8aa;
+    }
+    footer {
+      background-color: #e8cfc4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #7a3e2e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Appetite by Addi</h1>
+  <p>Fresh • Homemade • Baked with love</p>
+</header>
+
+<main>
+  <section>
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+      <span>Classic Chocolate Chip Cookies (6)</span>
+      <span>$12</span>
+    </div>
+    <div class="menu-item">
+      <span>Brown Butter Blondies (6)</span>
+      <span>$14</span>
+    </div>
+    <div class="menu-item">
+      <span>Seasonal Cupcakes (6)</span>
+      <span>$15</span>
+    </div>
+    <div class="menu-item">
+      <span>Custom Order (message for details)</span>
+      <span>Varies</span>
+    </div>
+
+    <p class="note">Menu rotates weekly. Follow along for seasonal flavors and specials.</p>
+  </section>
+
+  <section class="order-box">
+    <h2>Place an Order</h2>
+    <form action="https://formspree.io/f/xlgdnjla" method="POST">
+      <label>Full Name<br />
+        <input type="text" name="full-name" required />
+      </label><br /><br />
+
+      <label>Email<br />
+        <input type="email" name="email" required />
+      </label><br /><br />
+
+      <label>Order Details (items + quantity)<br />
+        <textarea name="order" rows="4" required></textarea>
+      </label><br /><br />
+
+      <label>Pickup or Delivery?<br />
+        <select name="method" required>
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+      </label><br /><br />
+
+      <label>Payment Method<br />
+        <select name="payment" required>
+          <option value="Venmo">Venmo</option>
+          <option value="Online">Pay Online</option>
+        </select>
+      </label><br /><br />
+
+      <button type="submit">Submit Order</button>
+    </form>
+    <p class="note">You will receive a confirmation email with total price and payment instructions.</p>
+  </section>
+
+  <section>
+    <h2>About Appetite by Addi</h2>
+    <p>
+      Appetite by Addi is a small-batch baking project focused on comforting classics
+      and fun seasonal treats. Everything is made from scratch with quality ingredients
+      and a whole lot of care.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Appetite by Addi</p>
+</footer>
+
+</body>
+</html>
