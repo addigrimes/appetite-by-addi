@@ -107,29 +107,30 @@
     <div class="menu-item">
       <span>Kitchen sink but better Cookies (6)</span>
       <span>$12</span>
+      <button onclick="addToCart('Kitchen Sink Cookies',12)">Add</button>
     </div>
     <div class="menu-item">
       <span>Pan Banging Chocolate Chip Cookies (6)</span>
       <span>$12</span>
+      <button onclick="addToCart('Chocolate Chip Cookies',12)">Add</button>
     </div>
     <div class="menu-item">
       <span>Pan Banging Funfetti Cookies (6)</span>
       <span>$12</span>
+      <button onclick="addToCart('Funfetti Cookies',12)">Add</button>
     </div>
     <div class="menu-item">
-      <span>Brown Butter Blondies (Serves 12-16)</span>
+      <span>Brown Butter Blondies (Serves 12–16)</span>
       <span>$22</span>
+      <button onclick="addToCart('Brown Butter Blondies',22)">Add</button>
     </div>
     <div class="menu-item">
-      <span>Seasonal Bundt Cake (Serves 12-16)</span>
+      <span>Seasonal Bundt Cake (Serves 12–16)</span>
       <span>$30</span>
-    </div>
-    <div class="menu-item">
-      <span>Custom Order (message for details)</span>
-      <span>Varies</span>
+      <button onclick="addToCart('Seasonal Bundt Cake',30)">Add</button>
     </div>
 
-    <p class="note">Menu rotates seasonally. Follow along for delicious flavors and specials.</p>
+    <p class="note">Menu rotates seasonally. Delivery fee varies by location and will be confirmed after ordering.</p>
   </section>
 
   <section>
@@ -141,6 +142,12 @@
 
   <section class="order-box">
     <h2>Place an Order</h2>
+    <div class="order-box">
+    <h2>Your Cart</h2>
+    <ul id="cart"></ul>
+    <p><strong>Total: $<span id="total">0</span></strong></p>
+    <p class="note">Delivery fee not included. Final total will be confirmed based on location.</p>
+
     <form action="https://formspree.io/f/xlgdnjla" method="POST" id="order-form">
       <label>Full Name<br />
         <input type="text" name="full-name" required />
@@ -172,12 +179,39 @@
     <p class="note">You will be redirected to Venmo to complete your payment.</p>
 
     <script>
-      const form = document.getElementById('order-form');
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        window.location.href = 'https://venmo.com/u/addisongrimes';
-      });
-    </script>
+let cart = [];
+let total = 0;
+
+function addToCart(item, price) {
+  cart.push({ item, price });
+  total += price;
+  updateCart();
+}
+
+function updateCart() {
+  const cartList = document.getElementById('cart');
+  cartList.innerHTML = '';
+  cart.forEach(c => {
+    const li = document.createElement('li');
+    li.textContent = `${c.item} - $${c.price}`;
+    cartList.appendChild(li);
+  });
+  document.getElementById('total').textContent = total;
+}
+
+const form = document.getElementById('order-form');
+form.addEventListener('submit', function () {
+  const orderField = document.createElement('input');
+  orderField.type = 'hidden';
+  orderField.name = 'cart';
+  orderField.value = cart.map(c => `${c.item} ($${c.price})`).join(', ') + ` | Total: $${total}`;
+  form.appendChild(orderField);
+
+  setTimeout(() => {
+    window.location.href = 'https://venmo.com/u/addisongrimes';
+  }, 500);
+});
+</script>
   </section>
 </main>
 
