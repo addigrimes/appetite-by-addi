@@ -3,93 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appetite by Addi | Order</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <title>Appetite by Addi</title>
+
+  <!-- Elegant, light font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       background-color: #faf7f2;
       color: #333;
     }
+
     header {
       background-color: #e8cfc4;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
+      font-family: 'Playfair Display', serif;
       font-weight: 500;
+      font-size: 2.6rem;
     }
+
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
     }
+
     main {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 2.5rem auto;
       padding: 0 1rem;
     }
+
     section {
       margin-bottom: 3rem;
     }
+
     h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
       border-bottom: 2px solid #e8cfc4;
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
     }
+
     .menu-item {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
       margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
       border-bottom: 1px dashed #ccc;
+      gap: 1rem;
     }
+
     .menu-item span {
-      font-weight: 600;
+      font-weight: 500;
     }
+
+    .menu-item button {
+      padding: 0.4rem 0.75rem;
+      border: none;
+      background-color: #e8cfc4;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .menu-item button:hover {
+      background-color: #d4b8aa;
+    }
+
     .note {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #555;
+      margin-top: 0.5rem;
     }
+
     .order-box {
       background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
+      padding: 1.75rem;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
+
+    #cart {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    #cart li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
     form input, form textarea, form select {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       margin-top: 0.25rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
+
     form button {
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
+      margin-top: 1.25rem;
+      padding: 0.8rem 1.5rem;
       background-color: #e8cfc4;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
     }
+
     form button:hover {
       background-color: #d4b8aa;
     }
+
     footer {
       background-color: #e8cfc4;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #7a3e2e;
-      text-decoration: none;
-      font-weight: 600;
+      font-size: 0.85rem;
     }
   </style>
 </head>
@@ -101,123 +143,121 @@
 </header>
 
 <main>
+
+  <!-- MENU -->
   <section>
     <h2>Menu</h2>
 
     <div class="menu-item">
-      <span>Kitchen sink but better Cookies (6)</span>
+      <span>Kitchen Sink but Better Cookies (6)</span>
       <span>$12</span>
-      <button onclick="addToCart('Kitchen Sink Cookies',12)">Add</button>
+      <button onclick="addToCart('Kitchen Sink Cookies', 12)">Add</button>
     </div>
+
     <div class="menu-item">
       <span>Pan Banging Chocolate Chip Cookies (6)</span>
       <span>$12</span>
-      <button onclick="addToCart('Chocolate Chip Cookies',12)">Add</button>
+      <button onclick="addToCart('Chocolate Chip Cookies', 12)">Add</button>
     </div>
+
     <div class="menu-item">
       <span>Pan Banging Funfetti Cookies (6)</span>
       <span>$12</span>
-      <button onclick="addToCart('Funfetti Cookies',12)">Add</button>
+      <button onclick="addToCart('Funfetti Cookies', 12)">Add</button>
     </div>
+
     <div class="menu-item">
       <span>Brown Butter Blondies (Serves 12–16)</span>
       <span>$22</span>
-      <button onclick="addToCart('Brown Butter Blondies',22)">Add</button>
+      <button onclick="addToCart('Brown Butter Blondies', 22)">Add</button>
     </div>
+
     <div class="menu-item">
       <span>Seasonal Bundt Cake (Serves 12–16)</span>
       <span>$30</span>
-      <button onclick="addToCart('Seasonal Bundt Cake',30)">Add</button>
+      <button onclick="addToCart('Seasonal Bundt Cake', 30)">Add</button>
     </div>
 
     <p class="note">Menu rotates seasonally. Delivery fee varies by location and will be confirmed after ordering.</p>
   </section>
 
-  <section>
-    <h2>About Appetite by Addi</h2>
-    <p>
-      Hi I’m Addi! I am a current college student at The University of Alabama. Over the last year or so I discovered a deep appreciation for the culinary arts in all aspects. Appetite by Addi started as a passion project but has turned out to be so much more.
-    </p>
-  </section>
-
+  <!-- CART + ORDER FORM -->
   <section class="order-box">
-    <h2>Place an Order</h2>
-    <div class="order-box">
     <h2>Your Cart</h2>
     <ul id="cart"></ul>
     <p><strong>Total: $<span id="total">0</span></strong></p>
-    <p class="note">Delivery fee not included. Final total will be confirmed based on location.</p>
+    <p class="note">Delivery fee not included. Final total confirmed after order review.</p>
 
-    <form action="https://formspree.io/f/xlgdnjla" method="POST" id="order-form">
-      <label>Full Name<br />
-        <input type="text" name="full-name" required />
-      </label><br /><br />
+    <form action="https://formspree.io/f/xlgdnjla" method="POST">
 
-      <label>Email<br />
-        <input type="email" name="email" required />
-      </label><br /><br />
+      <!-- Redirect AFTER Formspree receives submission -->
+      <input type="hidden" name="_next" value="https://venmo.com/u/addisongrimes">
 
-      <label>Order Details (items + quantity)<br />
-        <textarea name="order" rows="4" required></textarea>
-      </label><br /><br />
+      <!-- Cart summary -->
+      <input type="hidden" name="order_summary" id="order-summary">
 
-      <label>Pickup or Delivery?<br />
-        <select name="method" id="method" required>
+      <label>Full Name
+        <input type="text" name="name" required>
+      </label><br><br>
+
+      <label>Email
+        <input type="email" name="email" required>
+      </label><br><br>
+
+      <label>Pickup or Delivery?
+        <select name="method" required>
           <option value="Pickup">Pickup</option>
           <option value="Delivery">Delivery</option>
         </select>
-      </label><br /><br />
+      </label><br><br>
 
-      <label>Payment Method<br />
-        <select name="payment" id="payment-method" required>
-          <option value="Online">Pay Online</option>
-        </select>
-      </label><br /><br />
+      <label>Notes / Address (if delivery)
+        <textarea name="notes" rows="3"></textarea>
+      </label>
 
-      <button type="submit">Submit Order</button>
+      <button type="submit">Submit Order & Pay via Venmo</button>
     </form>
-    <p class="note">You will be redirected to Venmo to complete your payment.</p>
-
-    <script>
-let cart = [];
-let total = 0;
-
-function addToCart(item, price) {
-  cart.push({ item, price });
-  total += price;
-  updateCart();
-}
-
-function updateCart() {
-  const cartList = document.getElementById('cart');
-  cartList.innerHTML = '';
-  cart.forEach(c => {
-    const li = document.createElement('li');
-    li.textContent = `${c.item} - $${c.price}`;
-    cartList.appendChild(li);
-  });
-  document.getElementById('total').textContent = total;
-}
-
-const form = document.getElementById('order-form');
-form.addEventListener('submit', function () {
-  const orderField = document.createElement('input');
-  orderField.type = 'hidden';
-  orderField.name = 'cart';
-  orderField.value = cart.map(c => `${c.item} ($${c.price})`).join(', ') + ` | Total: $${total}`;
-  form.appendChild(orderField);
-
-  setTimeout(() => {
-    window.location.href = 'https://venmo.com/u/addisongrimes';
-  }, 500);
-});
-</script>
   </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Appetite by Addi</h2>
+    <p>
+      Hi, I’m Addi! I’m a current college student at The University of Alabama. Over the last year, I’ve discovered a deep appreciation for the culinary arts. Appetite by Addi started as a passion project and has grown into something truly special.
+    </p>
+  </section>
+
 </main>
 
 <footer>
   <p>© 2026 Appetite by Addi</p>
 </footer>
+
+<script>
+  let cart = [];
+  let total = 0;
+
+  function addToCart(item, price) {
+    cart.push({ item, price });
+    total += price;
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartList = document.getElementById('cart');
+    cartList.innerHTML = '';
+
+    cart.forEach(c => {
+      const li = document.createElement('li');
+      li.textContent = `${c.item} – $${c.price}`;
+      cartList.appendChild(li);
+    });
+
+    document.getElementById('total').textContent = total;
+    document.getElementById('order-summary').value =
+      cart.map(c => `${c.item} ($${c.price})`).join(', ') + ` | Total: $${total}`;
+  }
+</script>
 
 </body>
 </html>
